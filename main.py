@@ -1,1 +1,1 @@
-from src import masks
+from src import masks, widget
