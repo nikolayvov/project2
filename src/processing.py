@@ -2,12 +2,21 @@ from typing import List, Dict, Any
 
 
 def filter_by_state(transaction_list: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
-    """Функция, которая фильтрует список словарей по значению ключа 'state'"""
+    """
+    Функция, которая фильтрует список словарей по значению ключа 'state'
+    :param transaction_list: список словарей (транзакций)
+    :param state: статус операции для фильтрации
+    :return: отфильтрованный по статусу список транзакций
+    """
     return [transaction for transaction in transaction_list if transaction.get("state") == state]
 
 
 def sort_by_date(transaction_list: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """Функция, которая сортирует список словарей по дате"""
+    """
+    Функция, которая сортирует список словарей по дате
+    :param transaction_list: список словарей (транзакций)
+    :return: отсортированный по дате список транзакций
+    """
     return sorted(transaction_list, key=lambda item: item["date"], reverse=True)
 
 
