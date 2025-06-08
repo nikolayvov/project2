@@ -11,4 +11,21 @@ git clone git@github.com:nikolayvov/project2.git
 
 2. Установите зависимости:
 ```
-pip install -r requirements.txt
+poetry install
+```
+
+## Тестирование:
+
+Юнит-тесты были реализованы с помощью pytest. Покрытие составляет 100%.
+
+Запустить тесты:
+
+```
+pytest .
+```
+
+Покрытие:
+
+```
+pytest --cov=src .
+```
