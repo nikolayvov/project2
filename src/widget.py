@@ -1,4 +1,4 @@
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(any_number: str) -> str:
@@ -19,11 +19,17 @@ def mask_account_card(any_number: str) -> str:
 
 def get_date(date_time: str) -> str:
     """Функция, которая выделяет дату из стоки с датой и временем"""
+    if not date_time or len(date_time) > 26 or '-' not in date_time:
+        return "Неверный формат входных данных"
+
     date = date_time[:10]
     new_date = f"{date[8:10]}.{date[5:7]}.{date[0:4]}"
     return new_date
 
 
+print(get_date(""))
+print(get_date("20240311T02:26:18.671407"))
+print(get_date("2024-03-11T02:26:18.6714071234567890"))
 print(get_date("2024-03-11T02:26:18.671407"))
 print(mask_account_card("Visa Platinum 7000792289606361"))
 print(mask_account_card("Maestro 7000792289606361"))
