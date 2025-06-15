@@ -29,3 +29,10 @@ pytest .
 ```
 pytest --cov=src .
 ```
+### Модуль "Генераторы"
+
+```
+src/generators.py:card_number_generator - генератор номеров карт
+src/generators.py:transaction_descriptions - выдача описания операций
+src/generators.py:filter_by_currency - выдача трансакций по коду вылюты
+```

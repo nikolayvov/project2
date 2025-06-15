@@ -1,7 +1,6 @@
 import pytest
 
 
-from src.masks import get_mask_card_number, get_mask_account
 from src.widget import mask_account_card, get_date
 
 
@@ -9,7 +8,7 @@ def test_mask_account_card(correct_card):
     assert mask_account_card("Visa Platinum 7000792289606361") == correct_card
 
 
-def test_mask_account_card(correct_account):
+def test_mask_account_card_1(correct_account):
     assert mask_account_card("Счет 73654108430135874305") == correct_account
 
 
