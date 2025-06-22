@@ -32,7 +32,7 @@ def test_success_file():
     assert result == 5
     with open(file_name, "r", encoding="utf-8") as f:
         content = f.readlines()
-        assert content[-1] == "my_function ok 5"
+        assert content[-1] == "my_function ok 5\n"
 
 
 def test_error_file():
