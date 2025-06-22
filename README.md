@@ -36,3 +36,10 @@ src/generators.py:card_number_generator - генератор номеров ка
 src/generators.py:transaction_descriptions - выдача описания операций
 src/generators.py:filter_by_currency - выдача трансакций по коду вылюты
 ```
+
+### Модуль "Декораторы"
+
+```
+src/decorators.py:log - логирует результат выполнения функции и ошибки
+
+```
