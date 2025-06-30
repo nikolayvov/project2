@@ -12,4 +12,4 @@ def open_json(path: str) -> list:
             return []
 
 
-print(open_json("../data/operation.json"))
+# print(open_json("../data/operation.json"))
