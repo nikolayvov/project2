@@ -17,10 +17,10 @@ def open_json(path: str) -> list:
         try:
             return json.load(f)
         except json.JSONDecodeError:
-            logger.info("Возврат пустого списка, при отсутствии JSON-объекта")
+            logger.error("Возврат пустого списка, при отсутствии JSON-объекта")
             return []
         except Exception:
-            logger.info("Возврат пустого списка, при наличии любых ошибок")
+            logger.error("Возврат пустого списка, при наличии любых ошибок")
             return []
 
 

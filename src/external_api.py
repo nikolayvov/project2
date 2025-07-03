@@ -10,6 +10,8 @@ def convert_rub(operations: dict) -> float:
     """Функция, которая конвертирует сумму транзакции в рубли."""
     from_currency = operations["operationAmount"]["currency"]["code"]
     amount = operations["operationAmount"]["amount"]
+    if from_currency == "RUB":
+        return float(amount)
     to_currency = "RUB"
     url = f"https://api.apilayer.com/exchangerates_data/convert?to={to_currency}&from={from_currency}&amount={amount}"
     headers = {"apikey": os.getenv("APILAYER_KEY")}
