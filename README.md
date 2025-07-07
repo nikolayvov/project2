@@ -61,3 +61,13 @@ src/utils.py
 src/masks.py
 
 ```
+
+### Модуль "csv excel"
+
+создан модуль возвращающий список словарей с транзакциями
+из csv-файла и excel-файла
+
+```
+src/reader_csv_excel.py
+
+```
